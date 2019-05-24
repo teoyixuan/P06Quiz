@@ -28,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         btnReset = findViewById(R.id.btnReset);
 
         registerForContextMenu(operation);
+
+        btnReset.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                et1.setText("");
+                et2.setText("");
+                result.setText("");
+            }
+        });
     }
 
     @Override
